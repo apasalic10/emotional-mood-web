@@ -89,6 +89,11 @@ const Users = () => {
         <div className="mb-6">
           <p className="text-gray-600">Ukupno korisnika: {users.length}</p>
         </div>
+        <Link to={`/users/add`} className="block">
+          <button className="px-4 py-2 text-sm text-white bg-blue-500 rounded hover:bg-blue-600">
+            Dodaj korisnika
+          </button>
+        </Link>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {users.map((user) => (
             <UserCard key={user._id} user={user} isAdmin={isAdmin} onDelete={handleDelete} />

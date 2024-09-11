@@ -11,6 +11,7 @@ import Activities from './pages/MoodTracker/Activities';
 import EducationResources from './pages/MoodTracker/Resources';
 import EditUser from './pages/MoodTracker/EditUser';
 import Signup from './pages/Signup';
+import AddUser from './pages/MoodTracker/AddUser';
 
 const NotFound = () => {
   return (
@@ -48,6 +49,7 @@ function App() {
             <Route path="/activities" element={<Activities />} />
             <Route path="/resources" element={<EducationResources />} />
             <Route path="/users/:userId/edit" element={<EditUser />} />
+            <Route path="/users/add" element={<AddUser />} />
           </Route>
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />
