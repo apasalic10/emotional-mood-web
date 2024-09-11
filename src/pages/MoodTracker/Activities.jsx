@@ -97,17 +97,18 @@ const Activities = () => {
 
   return (
     <div className="min-h-screen py-10 bg-gray-100">
-      <Section title="Activities Management" gridCols={1}>
+      <Section title="Upravljanje aktivnostima" gridCols={1}>
         {/* Helper text */}
         <div className="p-4 mb-2 border-l-4 border-blue-500 rounded-md bg-blue-50">
-          <h3 className="mb-2 text-lg font-semibold text-blue-800">What are activities?</h3>
+          <h3 className="mb-2 text-lg font-semibold text-blue-800">Šta su aktivnosti?</h3>
           <p className="text-blue-700">
-            Activities are actions or events that can influence your emotions. They help you track
-            what you were doing when you experienced certain moods, allowing you to identify
-            patterns and potentially positive or negative influences on your emotional state.
+            Aktivnosti su radnje ili događaji koji mogu uticati na vaše emocije. Pomažu vam da
+            pratite šta ste radili kada ste doživjeli određena raspoloženja, omogućavajući vam da
+            prepoznate obrasce i potencijalno pozitivne ili negativne uticaje na vaše emocionalno
+            stanje.
           </p>
           <p className="mt-2 text-blue-700">
-            Examples: exercising, reading, socializing, working, or meditating.
+            Primjeri: vježbanje, čitanje, druženje, rad ili meditacija.
           </p>
         </div>
         <div className="p-6 bg-white border border-gray-200 rounded-lg">
@@ -118,14 +119,14 @@ const Activities = () => {
                 type="text"
                 value={newActivity}
                 onChange={(e) => setNewActivity(e.target.value)}
-                placeholder="Enter new activity"
+                placeholder="Unesi novu aktivnost"
                 className="flex-grow px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 type="submit"
                 className="px-4 py-2 text-white bg-blue-500 rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                Add Activity
+                Dodaj
               </button>
             </div>
           </form>
@@ -153,21 +154,21 @@ const Activities = () => {
                       onClick={handleUpdateActivity}
                       className="px-3 py-1 mr-2 text-sm text-green-600 border border-green-600 rounded hover:bg-green-100"
                     >
-                      Save
+                      Spremi
                     </button>
                   ) : (
                     <button
                       onClick={() => startEditing(activity)}
                       className="px-3 py-1 mr-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-100"
                     >
-                      Edit
+                      Uredi
                     </button>
                   )}
                   <button
                     onClick={() => handleDeleteActivity(activity._id)}
                     className="px-3 py-1 text-sm text-red-600 border border-red-600 rounded hover:bg-red-100"
                   >
-                    Delete
+                    Obriši
                   </button>
                 </div>
               </li>

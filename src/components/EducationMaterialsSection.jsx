@@ -3,7 +3,7 @@ import Section from './Section.jsx';
 
 const EducationMaterialsSection = ({ educationMaterials }) => {
   return (
-    <Section title="Educational Resources" gridCols={1}>
+    <Section title="Edukacijski materijali" gridCols={1}>
       <div className="p-4 bg-white rounded-lg shadow">
         <ul className="divide-y divide-gray-200">
           {educationMaterials.map((material, index) => (

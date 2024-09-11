@@ -32,19 +32,19 @@ const Navigation = () => {
                 {token && (
                   <div className="items-center justify-center hidden md:flex">
                     <NavLink to="/" className={navLinkClass}>
-                      Dashboard
+                      Kontrolna tabla
                     </NavLink>
                     <NavLink to="/users" className={navLinkClass}>
-                      Users
+                      Korisnici
                     </NavLink>
                     <NavLink to="/emotions" className={navLinkClass}>
-                      Emotions
+                      Emocije
                     </NavLink>
                     <NavLink to="/activities" className={navLinkClass}>
-                      Activities
+                      Aktivnosti
                     </NavLink>
                     <NavLink to="/resources" className={navLinkClass}>
-                      Resources
+                      Materijali
                     </NavLink>
                   </div>
                 )}
@@ -56,7 +56,7 @@ const Navigation = () => {
                 onClick={handleLogout}
                 className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
               >
-                Logout
+                Odjava
               </button>
             </div>
           </div>

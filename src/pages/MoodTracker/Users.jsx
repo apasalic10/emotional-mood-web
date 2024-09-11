@@ -31,8 +31,7 @@ const UserCard = ({ user, isAdmin, onDelete }) => (
         </div>
       </div>
       <div className="text-sm text-gray-700">
-        <p>Joined: {new Date(user.createdAt).toLocaleDateString()}</p>
-        <p>Total Entries: {user.entryCount || 0}</p>
+        <p>Pridružio se: {new Date(user.createdAt).toLocaleDateString()}</p>
       </div>
     </Link>
     {isAdmin && (
@@ -41,13 +40,13 @@ const UserCard = ({ user, isAdmin, onDelete }) => (
           to={`/users/${user._id}/edit`}
           className="px-3 py-1 mr-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-100"
         >
-          Edit
+          Uredi
         </Link>
         <button
           onClick={() => onDelete(user._id)}
           className="px-3 py-1 text-sm text-red-600 border border-red-600 rounded hover:bg-red-100"
         >
-          Delete
+          Obriši
         </button>
       </div>
     )}
@@ -86,9 +85,9 @@ const Users = () => {
 
   return (
     <div className="min-h-screen py-10 bg-gray-100">
-      <Section title="User Management" gridCols={1}>
+      <Section title="Upravljanje korisnicima" gridCols={1}>
         <div className="mb-6">
-          <p className="text-gray-600">Total users: {users.length}</p>
+          <p className="text-gray-600">Ukupno korisnika: {users.length}</p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {users.map((user) => (

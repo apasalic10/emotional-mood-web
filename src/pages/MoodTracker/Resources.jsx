@@ -79,7 +79,7 @@ const EducationResources = () => {
 
   return (
     <div className="min-h-screen py-10 bg-gray-100">
-      <Section title="Education Resources" gridCols={1}>
+      <Section title="Edukacijski Materijali" gridCols={1}>
         <div className="p-8 bg-white border border-gray-200 rounded-2xl">
           {isAdmin && (
             <form onSubmit={handleAddResource} className="mb-8 space-y-4">
@@ -87,14 +87,14 @@ const EducationResources = () => {
                 type="text"
                 value={newResource.title}
                 onChange={(e) => setNewResource({ ...newResource, title: e.target.value })}
-                placeholder="Title"
+                placeholder="Naslov"
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
               />
               <input
                 type="text"
                 value={newResource.description}
                 onChange={(e) => setNewResource({ ...newResource, description: e.target.value })}
-                placeholder="Description"
+                placeholder="Opis"
                 className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
               />
               <input
@@ -108,7 +108,7 @@ const EducationResources = () => {
                 type="submit"
                 className="w-full px-4 py-2 text-white transition-colors bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
-                Add Resource
+                Dodaj{' '}
               </button>
             </form>
           )}
@@ -146,7 +146,7 @@ const EducationResources = () => {
                       onClick={handleUpdateResource}
                       className="px-3 py-1 mr-2 text-sm text-green-600 border border-green-600 rounded hover:bg-green-100"
                     >
-                      Save
+                      Spremi
                     </button>
                   </div>
                 ) : (
@@ -160,7 +160,7 @@ const EducationResources = () => {
                         rel="noopener noreferrer"
                         className="inline-block mt-3 text-blue-500 transition-colors hover:text-blue-600"
                       >
-                        Learn More →
+                        Pročitaj više →
                       </a>
                     </div>
                     {isAdmin && (

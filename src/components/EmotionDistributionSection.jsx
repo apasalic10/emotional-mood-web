@@ -19,11 +19,11 @@ const EmotionDistributionSection = ({ emotions, emotionEntries }) => {
   }, [emotionEntries]);
 
   return (
-    <Section title="Emotion Distribution" gridCols={1}>
+    <Section title="Distribucija Emocija" gridCols={1}>
       <div className="p-6 bg-white border border-gray-200 rounded-lg">
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-700">Emotions</h3>
+            <h3 className="mb-4 text-lg font-semibold text-gray-700">Emocije</h3>
             <div className="space-y-2">
               {sortedEmotions.map(([emotion]) => (
                 <div key={emotion} className="flex items-center">
@@ -37,7 +37,7 @@ const EmotionDistributionSection = ({ emotions, emotionEntries }) => {
             </div>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-gray-700">Frequency</h3>
+            <h3 className="mb-4 text-lg font-semibold text-gray-700">Učestalost</h3>
             <div className="space-y-2">
               {sortedEmotions.map(([emotion, count]) => (
                 <div key={emotion} className="flex items-center">

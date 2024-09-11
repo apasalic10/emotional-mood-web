@@ -63,11 +63,11 @@ const EditUser = () => {
     <div className="min-h-screen px-4 py-12 bg-gray-100 sm:px-6 lg:px-8">
       <div className="max-w-md mx-auto overflow-hidden bg-white rounded-lg shadow-md">
         <div className="px-4 py-5 sm:p-6">
-          <h2 className="mb-6 text-2xl font-semibold text-gray-900">Edit User</h2>
+          <h2 className="mb-6 text-2xl font-semibold text-gray-900">Uredi korisnika</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="firstname" className="block text-sm font-medium text-gray-700">
-                First Name
+                Ime{' '}
               </label>
               <input
                 type="text"
@@ -80,7 +80,7 @@ const EditUser = () => {
             </div>
             <div>
               <label htmlFor="lastname" className="block text-sm font-medium text-gray-700">
-                Last Name
+                Prezime
               </label>
               <input
                 type="text"
@@ -114,7 +114,7 @@ const EditUser = () => {
                 className="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
               />
               <label htmlFor="isAdmin" className="block ml-2 text-sm text-gray-900">
-                Admin Role
+                Admin
               </label>
             </div>
             <div className="flex items-center justify-between">
@@ -123,13 +123,13 @@ const EditUser = () => {
                 onClick={handleGoBack}
                 className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Back
+                Nazad
               </button>
               <button
                 type="submit"
                 className="px-3 py-1 mr-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-100"
               >
-                Update User
+                Potvrdi
               </button>
             </div>
           </form>

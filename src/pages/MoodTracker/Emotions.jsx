@@ -76,13 +76,13 @@ const EmotionCard = ({ emotion, onDelete, onEdit, isAdmin }) => {
           onClick={handleEdit}
           className="px-3 py-1 mr-2 text-sm text-green-600 border border-green-600 rounded hover:bg-green-100"
         >
-          Save
+          Spremi
         </button>
         <button
           onClick={() => setIsEditing(false)}
           className="px-3 py-1 text-sm text-gray-600 border border-gray-600 rounded hover:bg-gray-100"
         >
-          Cancel
+          Odustani
         </button>
       </div>
     );
@@ -106,13 +106,13 @@ const EmotionCard = ({ emotion, onDelete, onEdit, isAdmin }) => {
             onClick={() => setIsEditing(true)}
             className="px-3 py-1 mr-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-100"
           >
-            Edit
+            Uredi
           </button>
           <button
             onClick={() => onDelete(emotion._id)}
             className="px-3 py-1 text-sm text-red-600 border border-red-600 rounded hover:bg-red-100"
           >
-            Delete
+            Obriši
           </button>
         </div>
       )}
@@ -140,7 +140,7 @@ const AddEmotionForm = ({ onAdd }) => {
         name="name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="Emotion name"
+        placeholder="Ime emocije"
         className="w-full p-2 mb-4 border rounded"
         required
       />
@@ -149,7 +149,7 @@ const AddEmotionForm = ({ onAdd }) => {
         name="reaction"
         value={reaction}
         onChange={(e) => setReaction(e.target.value)}
-        placeholder="Emotion reaction"
+        placeholder="Reakcija na emociju"
         className="w-full p-2 mb-4 border rounded"
         required
       />
@@ -157,11 +157,11 @@ const AddEmotionForm = ({ onAdd }) => {
         name="description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        placeholder="Description"
+        placeholder="Opis emocije"
         className="w-full p-2 mb-4 border rounded"
       />
       <button type="submit" className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">
-        Add Emotion
+        Dodaj
       </button>
     </form>
   );
@@ -226,22 +226,21 @@ const Emotions = () => {
 
   return (
     <div className="min-h-screen py-10 bg-gray-100">
-      <Section title="Emotion Management" gridCols={1}>
+      <Section title="Upravljanje emocijama" gridCols={1}>
         <div className="p-4 border-l-4 border-blue-500 rounded-md bg-blue-50">
-          <h3 className="mb-2 text-lg font-semibold text-blue-800">What are emotions?</h3>
+          <h3 className="mb-2 text-lg font-semibold text-blue-800">Šta su emocije?</h3>
           <p className="text-blue-700">
-            Emotions are complex psychological states that involve three distinct components: a
-            subjective experience, a physiological response, and a behavioral or expressive
-            response.
+            Emocije su složena psihološka stanja koja uključuju tri različite komponente:
+            subjektivno iskustvo, fiziološki odgovor i ponašajni ili izražajni odgovor.
           </p>
           <p className="mt-2 text-blue-700">
-            Examples of emotions: joy, sadness, anger, fear, surprise, disgust, etc.
+            Primjeri emocija: radost, tuga, bijes, strah, iznenađenje, gađenje, itd.
           </p>
         </div>
 
         <AddEmotionForm onAdd={handleAddEmotion} />
         <div className="">
-          <p className="text-gray-600">Total emotions: {emotions.length}</p>
+          <p className="text-gray-600">Ukupno emocija: {emotions.length}</p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {emotions.map((emotion) => (

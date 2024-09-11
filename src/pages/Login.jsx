@@ -21,11 +21,11 @@ function Login() {
     e.preventDefault();
     try {
       if (!emailRegex.test(email)) {
-        setError('Invalid Email Address');
+        setError('Pogrešna email adresa!');
         setShowError(true);
         return false;
       } else if (!password || password === null || password === undefined) {
-        setError('Invalid Password!');
+        setError('Pogrešna lozinka!');
         setShowError(true);
         return false;
       } else {
@@ -39,7 +39,9 @@ function Login() {
             const { user, accessToken } = response.data;
 
             if (!user.isAdmin) {
-              setError('Access denied. Only administrators can log in to this dashboard.');
+              setError(
+                'Pristup odbijen. Samo administratori mogu da se prijave na ovu aplikaciju.'
+              );
               setIsLoading(false);
               setShowError(true);
               return;
@@ -63,7 +65,7 @@ function Login() {
       }
     } catch (err) {
       setShowError(true);
-      setError('Something went wrong');
+      setError('Nešto nije uredu. Pokušajte ponovo.');
     }
   };
 
@@ -92,7 +94,7 @@ function Login() {
                   <h1 className="text-3xl font-bold text-amber-500">{appName}</h1>
                 )}
               </div>
-              <h1 className="text-2xl font-bold text-gray-800">Login</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Prijava</h1>
               <form onSubmit={handleSubmit} className="flex flex-col w-full py-4">
                 <input
                   onChange={(e) => setEmail(e.target.value)}
@@ -136,14 +138,14 @@ function Login() {
                   </button>
                 ) : (
                   <button className="py-3 my-3 font-bold text-white rounded-lg bg-amber-500">
-                    Login
+                    Prijavi se
                   </button>
                 )}
                 <p className="py-10 text-center">
-                  <span className="text-gray-400">New user?</span>{' '}
+                  <span className="text-gray-400">Nemate korisnički račun?</span>{' '}
                   <Link to="/signup" className="text-amber-600">
                     {' '}
-                    Create new account
+                    Registrujte se
                   </Link>
                 </p>
               </form>

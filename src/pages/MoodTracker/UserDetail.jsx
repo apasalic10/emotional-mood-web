@@ -134,7 +134,7 @@ const UserDetail = () => {
 
   return (
     <div className="min-h-screen py-10 space-y-6 bg-gray-100">
-      <Section title="User Details" gridCols={1}>
+      <Section title="Detalji korisnika" gridCols={1}>
         <div className="p-6 bg-white border border-gray-200 rounded-lg">
           <div className="flex items-start justify-between mb-4">
             <h2 className="text-2xl font-bold">
@@ -157,32 +157,32 @@ const UserDetail = () => {
               to={`/users/${selectedUserId}/edit`}
               className="px-3 py-1 mr-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-100"
             >
-              Edit User
+              Uredi korisnika{' '}
             </Link>
           </div>
         </div>
       </Section>
 
-      <Section title="Emotion Entry Report" gridCols={1}>
+      <Section title="Izvještaj o unosu Eemocija" gridCols={1}>
         <div className="p-6 bg-white border border-gray-200 rounded-lg">
           <div className="mb-4">
             <button
               onClick={() => setViewType('daily')}
               className={`mr-2 px-4 py-2 rounded ${viewType === 'daily' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
             >
-              Daily View
+              Dnevni pregled
             </button>
             <button
               onClick={() => setViewType('weekly')}
               className={`mr-2 px-4 py-2 rounded ${viewType === 'weekly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
             >
-              Weekly View
+              Sedmični pregled
             </button>
             <button
               onClick={() => setViewType('monthly')}
               className={`px-4 py-2 rounded ${viewType === 'monthly' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
             >
-              Monthly View
+              Mjesečni pregled
             </button>
           </div>
           {emotionData.length > 0 ? (
@@ -192,7 +192,7 @@ const UserDetail = () => {
                 <XAxis dataKey="date" />
                 <YAxis domain={getYAxisDomain()} />
                 <Tooltip
-                  formatter={(value, name, props) => [`Count: ${value}`, `Emotion: ${name}`]}
+                  formatter={(value, name, props) => [`Count: ${value}`, `Emocija: ${name}`]}
                 />
                 <Legend />
                 {uniqueEmotions.map((emotion, index) => (
@@ -212,7 +212,7 @@ const UserDetail = () => {
       </Section>
 
       {isAdmin && (
-        <Section title="User Emotions" gridCols={1}>
+        <Section title="Lista Emocija Korisnika" gridCols={1}>
           <div className="p-2 bg-white ">
             {emotions && emotions.length > 0 ? (
               <>
@@ -255,7 +255,7 @@ const UserDetail = () => {
                 )}
               </>
             ) : (
-              <p>No emotion entries found for this user.</p>
+              <p>Nema unosa emocija za ovog korisnika.</p>
             )}
           </div>
         </Section>

@@ -71,7 +71,7 @@ const EmotionTrendChart = ({ emotionEntries }) => {
         <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
-          <YAxis label={{ value: 'Count', angle: -90, position: 'insideLeft' }} />
+          <YAxis label={{ value: 'Ukupno', angle: -90, position: 'insideLeft' }} />
           <Tooltip />
           <Legend />
           {uniqueEmotions.map((emotion) => (
@@ -90,13 +90,13 @@ const EmotionTrendChart = ({ emotionEntries }) => {
   };
 
   return (
-    <Section title="Emotional Trends Over Time" gridCols={1}>
+    <Section title="Emocionalni Trendovi tokom Vremena" gridCols={1}>
       <div className="p-6 bg-white border border-gray-200 rounded-lg">
         <p className="mb-4 text-sm text-gray-600">
-          This chart shows how the frequency of different emotions has changed over time. Each line
-          represents a different emotion, and the height of the line indicates the number of times
-          that emotion was recorded on a given day. This can help you identify patterns in emotional
-          experiences and track your clients' emotional journeys over time.
+          Ovaj grafikon prikazuje kako se učestalost različitih emocija mijenjala tokom vremena.
+          Svaka linija predstavlja različitu emociju, a visina linije pokazuje koliko je puta ta
+          emocija zabilježena na određeni dan. Ovo može pomoći u prepoznavanju obrazaca u
+          emocionalnim iskustvima i praćenju emocionalnih putovanja vaših klijenata tokom vremena.
         </p>
         {renderChart()}
       </div>

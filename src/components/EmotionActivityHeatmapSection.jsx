@@ -61,12 +61,12 @@ const EmotionActivityHeatmapSection = ({ emotionEntries }) => {
   const jitteredData = addJitterToDataPoints(data);
 
   return (
-    <Section title="Correlation Between Emotions and Activities" gridCols={1}>
+    <Section title="Korelacija izmeđi Emocija i Aktivnosti" gridCols={1}>
       <div className="p-6 bg-white border border-gray-200 rounded-lg">
         <p className="mb-4 text-sm text-gray-600">
-          This heatmap visualizes the frequency of emotions experienced during different activities.
-          Darker colors indicate a higher occurrence of an emotion for a particular activity,
-          helping identify patterns and potential mood triggers.
+          Ova toplinska mapa vizualizira učestalost emocija koje se doživljavaju tokom različitih
+          aktivnosti. Tamnije boje označavaju veću učestalost određene emocije za određenu
+          aktivnost, što pomaže u prepoznavanju obrazaca i mogućih okidača raspoloženja.
         </p>
         <div className="h-96">
           <ResponsiveContainer width="100%" height="100%">
@@ -97,8 +97,8 @@ const EmotionActivityHeatmapSection = ({ emotionEntries }) => {
                     const { activity, emotion, value } = payload[0].payload;
                     return (
                       <div className="p-2 bg-white border border-gray-200 rounded shadow">
-                        <p className="font-semibold">{`${emotion} during ${activity}`}</p>
-                        <p>{`Frequency: ${value}`}</p>
+                        <p className="font-semibold">{`"${emotion}" tokom aktivnosti "${activity}"`}</p>
+                        <p>{`Učestalost: ${value}`}</p>
                       </div>
                     );
                   }
@@ -114,9 +114,9 @@ const EmotionActivityHeatmapSection = ({ emotionEntries }) => {
           </ResponsiveContainer>
         </div>
         <div className="flex items-center justify-between mt-4">
-          <span className="text-xs text-gray-500">Less frequent</span>
+          <span className="text-xs text-gray-500">Manja učestalost</span>
           <div className="w-1/2 h-2 rounded bg-gradient-to-r from-white to-red-500"></div>
-          <span className="text-xs text-gray-500">More frequent</span>
+          <span className="text-xs text-gray-500">Veća učestalost</span>
         </div>
       </div>
     </Section>

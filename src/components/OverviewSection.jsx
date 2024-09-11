@@ -20,22 +20,22 @@ const OverviewCard = ({ title, count, color, link }) => (
 );
 
 const OverviewSection = ({ users, emotions, activities, educationMaterials }) => (
-  <Section title="Overview" gridCols={4}>
-    <OverviewCard title="Total Users" count={users?.length ?? 0} color="blue" link="/users" />
+  <Section title="Pregled podataka" gridCols={4}>
+    <OverviewCard title="Ukupno korisnika" count={users?.length ?? 0} color="blue" link="/users" />
     <OverviewCard
-      title="Total Emotions"
+      title="Ukupno emocija"
       count={emotions?.length ?? 0}
       color="green"
       link="/emotions"
     />
     <OverviewCard
-      title="Total Activities"
+      title="Ukupno aktivnosti"
       count={activities?.length ?? 0}
       color="yellow"
       link="/activities"
     />
     <OverviewCard
-      title="Educational Resources"
+      title="Ukupno edukativnih materijala"
       count={educationMaterials?.length ?? 0}
       color="purple"
       link="/resources"
