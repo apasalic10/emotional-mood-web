@@ -163,7 +163,7 @@ const UserDetail = () => {
         </div>
       </Section>
 
-      <Section title="Izvještaj o unosu Eemocija" gridCols={1}>
+      <Section title="Izvještaj o unosu Emocija" gridCols={1}>
         <div className="p-6 bg-white border border-gray-200 rounded-lg">
           <div className="mb-4">
             <button
