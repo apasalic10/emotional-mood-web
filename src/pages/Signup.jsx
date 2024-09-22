@@ -84,20 +84,20 @@ function Signup() {
         <div className="w-full px-4 py-24 ">
           <div className="max-w-[450px] h-auto mx-auto bg-white/75 rounded-3xl">
             <div className="max-w-[320px] mx-auto pt-16 pb-5">
-              <h1 className="text-3xl font-bold text-gray-900">Sign Up</h1>
+              <h1 className="text-3xl font-bold text-gray-900">Registracija</h1>
               <form onSubmit={handleSubmit} className="flex flex-col w-full py-4">
                 <input
                   onChange={(e) => setFirstName(e.target.value)}
                   className="p-3 my-2 border border-gray-300 rounded"
                   type="text"
-                  placeholder="First Name"
+                  placeholder="Ime"
                   autoComplete="firstName"
                 />
                 <input
                   onChange={(e) => setLastname(e.target.value)}
                   className="p-3 my-2 border border-gray-300 rounded"
                   type="text"
-                  placeholder="Last Name"
+                  placeholder="Prezime"
                   autoComplete="lastName"
                 />
                 <input
@@ -125,7 +125,7 @@ function Signup() {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="p-3 my-2 border border-gray-300 rounded"
                   type="password"
-                  placeholder="Confirm Password"
+                  placeholder="Potvrdi Password"
                   autoComplete="current-password"
                 />
                 {showError && (
@@ -156,14 +156,14 @@ function Signup() {
                   </button>
                 ) : (
                   <button className="py-3 my-3 font-bold text-white rounded-lg bg-amber-500">
-                    Sign Up
+                    Registracija
                   </button>
                 )}
                 <p className="py-5">
-                  <span className="text-gray-500">Already have an account? </span>{' '}
+                  <span className="text-gray-500">Već imate korisnički račun? </span>{' '}
                   <Link to="/login" className="text-amber-500">
                     {' '}
-                    Log In
+                    Prijava
                   </Link>
                 </p>
               </form>
